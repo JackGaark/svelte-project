@@ -6,10 +6,10 @@
   let slide = 0;
   let x = 0;
   let clientX = 0;
-  export let slides ;
+  export let slides;
 
   const nextSlide = () => {
-    if (slide < 2) {
+    if (slide < slides.length - 1) {
       activeSlide.style.transform = `translate3d(-${slide + 1}00vw, 0, 0)`;
       slide += 1;
     } else {
@@ -21,7 +21,7 @@
   const prevSlide = () => {
     if (slide === 0) {
       activeSlide.style.transform = `translate3d(-200vw, 0, 0)`;
-      slide = 2;
+      slide = slides.length - 1;
     } else {
       activeSlide.style.transform = `translate3d(-${slide - 1}00vw, 0, 0)`;
       slide = slide - 1;
@@ -60,14 +60,20 @@
       });
     });
   });
-
-  
 </script>
 
 <div class="slider-wrapper">
-  <div class="slider" bind:this={activeSlide}>
+  <div
+    class="slider"
+    bind:this={activeSlide}
+    style={`width: ${slides.length}00vw`}
+  >
     {#each slides as slide, i}
-      <div class="slide" style={`background-position: ${i}00vw; background: url(${slide})`} />
+      <div
+        class="slide"
+        title={i}
+        style={`background-position: ${i}00vw; background: url(${slide})`}
+      />
     {/each}
   </div>
 
@@ -87,15 +93,17 @@
     <div on:click={() => onActiveSlide(0)} class={slide === 0 && "active"} />
     <div on:click={() => onActiveSlide(1)} class={slide === 1 && "active"} />
     <div on:click={() => onActiveSlide(2)} class={slide === 2 && "active"} />
+    <div on:click={() => onActiveSlide(3)} class={slide === 3 && "active"} />
+    <div on:click={() => onActiveSlide(4)} class={slide === 4 && "active"} />
+    <div on:click={() => onActiveSlide(5)} class={slide === 5 && "active"} />
   </div>
 </div>
 
 <style>
-    .slider {
+  .slider {
     position: relative;
     display: flex;
     flex-wrap: nowrap;
-    width: 300vw;
     transition: all 200ms ease-out 0s;
   }
 
@@ -157,5 +165,4 @@
   .dots .active {
     background-color: rgba(255, 255, 255, 0.5);
   }
-
 </style>
