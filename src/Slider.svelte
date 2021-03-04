@@ -4,12 +4,12 @@
   import { ChevronLeftIcon, ChevronRightIcon } from "svelte-feather-icons";
 
   const slides = [
-    "images/01-sb_cis_7.jpg",
     "images/02-sb_aldo2.jpg",
-    "images/01-sb_cis_7.jpg",
-    "images/02-sb_aldo2.jpg",
-    "images/01-sb_cis_7.jpg",
-    "images/02-sb_aldo2.jpg",
+    "images/04-sb_rise_1b.jpg",
+    "images/05-sb_ka_1.jpg",
+    "images/06-sb_cis_2.jpg",
+    "images/07-sb_cis_3.jpg",
+    "images/08-sb-boxts.jpg",
   ];
 
   onMount(() => {

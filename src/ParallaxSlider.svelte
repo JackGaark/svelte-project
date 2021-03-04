@@ -71,7 +71,6 @@
     {#each slides as slide, i}
       <div
         class="slide"
-        title={i}
         style={`background-position: ${i}00vw; background: url(${slide})`}
       />
     {/each}
