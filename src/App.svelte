@@ -32,11 +32,14 @@
 
 <main>
   <div class="container">
-    <div
-      class="section"
-      style="background: blue; background: url('images/01-sb_cis_7.jpg'); background-size: cover; background-attachment: fixed; background-reapeat: no-repeat;"
+    <ParallaxSlider
+      title="This is a random title 1"
+      slides={[
+        "images/01-sb_cis_7.jpg",
+      ]}
     />
     <ParallaxSlider
+      title="This is a random title 2"
       slides={[
         "images/02-sb_aldo2.jpg",
         "images/04-sb_rise_1b.jpg",
@@ -46,12 +49,15 @@
         "images/08-sb-boxts.jpg",
       ]}
     />
-    <div
-      class="section"
-      style="background: blue; background: url('images/09-sb_ka_3.jpg'); background-size: cover; background-attachment: fixed; background-reapeat: no-repeat;"
-    />
-
     <ParallaxSlider
+      title="This is a random title 3"
+      slides={[
+        "images/09-sb_ka_3.jpg",
+        "videos/video1.mov"
+      ]}
+    />
+    <ParallaxSlider
+      title="This is a random title 4"
       slides={[
         "images/11-sb_2.jpg",
         "images/12-sb-berlinb.jpg",
@@ -61,12 +67,14 @@
         "images/17-sb_cis_5.jpg",
       ]}
     />
-
-    <div
-      class="section"
-      style="background: blue; background: url('images/10-sb_4.jpg'); background-size: cover; background-attachment: fixed; background-reapeat: no-repeat;"
-    />
     <ParallaxSlider
+    title="This is a random title 5"
+    slides={[
+      "images/10-sb_4.jpg",
+    ]}
+  />
+    <ParallaxSlider
+    title="This is a random title 6"
       slides={[
         "images/18-sb-denisets.jpg",
         "images/19-sb_cis_9b.jpg",
@@ -86,10 +94,6 @@
 
   .container {
     overflow: hidden;
-  }
-  .section {
-    height: 100vh;
-    width: 100vw;
   }
 
   .header {

@@ -1,12 +1,11 @@
 <script>
-  import { onMount } from "svelte";
   import { ChevronLeftIcon, ChevronRightIcon } from "svelte-feather-icons";
 
   let activeSlide;
   let slide = 0;
   let x = 0;
-  let clientX = 0;
   export let slides;
+  export let title;
 
   const nextSlide = () => {
     if (slide < slides.length - 1) {
@@ -33,46 +32,33 @@
     activeSlide.style.transform = `translate3d(-${n}00vw, 0, 0)`;
   };
 
-  const onTouchStart = (e) => {
-    e.stopPropagation();
-    x = e.x;
-    activeSlide.style.cursor = "move";
-  };
-
-  onMount(() => {
-    const elements = document.querySelectorAll(".slide");
-    elements.forEach((item) => {
-      item.addEventListener("mousedown", (e) => {
-        e.stopPropagation();
-        clientX = e.x;
-        item.addEventListener("mousemove", onTouchStart);
-      });
-
-      item.addEventListener("mouseup", (e) => {
-        e.stopPropagation();
-        item.removeEventListener("mousemove", onTouchStart);
-        activeSlide.style.cursor = "default";
-        if (x < clientX) {
-          nextSlide();
-        } else {
-          prevSlide();
-        }
-      });
-    });
-  });
 </script>
 
-<div class="slider-wrapper">
+<div class="slider-wrapper" >
+  <h2 class="slider-title">{title}</h2>
   <div
     class="slider"
     bind:this={activeSlide}
     style={`width: ${slides.length}00vw`}
   >
     {#each slides as slide, i}
-      <div
-        class="slide"
-        style={`background-position: ${i}00vw; background: url(${slide})`}
-      />
+      {#if slide.indexOf('videos') < 0}
+        <div
+          id={i}
+          class="slide"
+          style={`background-position: ${i}00vw center; background-image: url(${slide})`}
+          on:click={nextSlide}
+        />
+      {:else}
+        <div
+          class="slide slide-video"
+          style={`background-position: ${i}00vw center;`}
+          on:click={nextSlide}
+          >
+          <!-- svelte-ignore a11y-media-has-caption -->
+          <video src={slide} autoplay loop></video>
+        </div>
+      {/if}
     {/each}
   </div>
 
@@ -88,13 +74,8 @@
       </span>
     </div>
   </div>
-  <div class="dots">
-    <div on:click={() => onActiveSlide(0)} class={slide === 0 && "active"} />
-    <div on:click={() => onActiveSlide(1)} class={slide === 1 && "active"} />
-    <div on:click={() => onActiveSlide(2)} class={slide === 2 && "active"} />
-    <div on:click={() => onActiveSlide(3)} class={slide === 3 && "active"} />
-    <div on:click={() => onActiveSlide(4)} class={slide === 4 && "active"} />
-    <div on:click={() => onActiveSlide(5)} class={slide === 5 && "active"} />
+  <div class="paginator">
+    <h4>{slide+1} / {slides.length}</h4>
   </div>
 </div>
 
@@ -109,7 +90,6 @@
   .slide {
     height: 100vh;
     width: 100vw;
-    background: red;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -126,6 +106,7 @@
   }
 
   .arrow {
+    font-family: 'Roc Wide';
     position: absolute;
     width: 70px;
     cursor: pointer;
@@ -142,7 +123,7 @@
     right: 0;
   }
 
-  .dots {
+  .paginator {
     position: absolute;
     bottom: 20px;
     left: 0;
@@ -151,17 +132,33 @@
     text-align: center;
   }
 
-  .dots > div {
-    height: 10px;
-    width: 10px;
-    border-radius: 10px;
-    cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.9);
-    display: inline-block;
-    margin: 0px 3px;
+  .paginator > h4 {
+    font-family: 'Moret Regular';
+    background-color: rgb(157 157 157 / 74%);
+    color: #363636;
+    font-size: 24px;
+    padding: 25px;
+    width: 100px;
+    margin: 0 auto;
   }
-
-  .dots .active {
-    background-color: rgba(255, 255, 255, 0.5);
-  }
+  .slider-title {
+    font-family: 'Opposit-Medium';
+    background-color: rgb(157 157 157 / 74%);
+    min-width: 20vw;
+    padding: 15px;
+    position: absolute;
+    z-index: 1;
+    left: 15px;
+    top: 15px;
+    color: #363636;
+    font-size: 36px;
+    -webkit-box-shadow: 0px 0px 10px 5px rgb(199 199 199 / 76%);
+    -moz-box-shadow: 0px 0px 10px 5px rgb(199 199 199 / 76%);
+    box-shadow: 0px 0px 10px 5px rgb(199 199 199 / 76%);
+}
+video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
 </style>
