@@ -1,11 +1,9 @@
 <script>
-  import { onMount } from "svelte";
   import { ChevronLeftIcon, ChevronRightIcon } from "svelte-feather-icons";
 
   let activeSlide;
   let slide = 0;
   let x = 0;
-  let clientX = 0;
   export let slides;
   export let title;
 
@@ -34,14 +32,9 @@
     activeSlide.style.transform = `translate3d(-${n}00vw, 0, 0)`;
   };
 
-  const onTouchStart = (e) => {
-    e.stopPropagation();
-    x = e.x;
-    activeSlide.style.cursor = "move";
-  };
 </script>
 
-<div class="slider-wrapper" on:click={nextSlide}>
+<div class="slider-wrapper" >
   <h2 class="slider-title">{title}</h2>
   <div
     class="slider"
@@ -54,11 +47,13 @@
           id={i}
           class="slide"
           style={`background-position: ${i}00vw center; background-image: url(${slide})`}
+          on:click={nextSlide}
         />
       {:else}
         <div
           class="slide slide-video"
           style={`background-position: ${i}00vw center;`}
+          on:click={nextSlide}
           >
           <!-- svelte-ignore a11y-media-has-caption -->
           <video src={slide} autoplay loop></video>
