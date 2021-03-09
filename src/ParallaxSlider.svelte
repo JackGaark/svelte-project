@@ -125,7 +125,7 @@
 
   .paginator {
     position: absolute;
-    bottom: 20px;
+    bottom: 25px;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -148,8 +148,8 @@
     padding: 15px;
     position: absolute;
     z-index: 1;
-    left: 15px;
-    top: 15px;
+    right: 15px;
+    bottom: 0;
     color: #363636;
     font-size: 36px;
     -webkit-box-shadow: 0px 0px 10px 5px rgb(199 199 199 / 76%);
