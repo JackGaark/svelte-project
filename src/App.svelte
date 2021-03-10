@@ -33,7 +33,7 @@
 <main>
   <div class="container">
     <ParallaxSlider
-      title="This is a random title 1"
+      title="This is the first title"
       slides={[
         "images/01-sb_cis_7.jpg",
       ]}
