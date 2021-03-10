@@ -56,7 +56,7 @@
           on:click={nextSlide}
           >
           <!-- svelte-ignore a11y-media-has-caption -->
-          <video src={slide} autoplay loop></video>
+          <video src={slide} autoplay loop muted></video>
         </div>
       {/if}
     {/each}
@@ -113,6 +113,7 @@
     top: 0;
     bottom: 0;
     margin: auto;
+    color: #fff;
   }
 
   .left {
@@ -134,27 +135,24 @@
 
   .paginator > h4 {
     font-family: 'Moret Regular';
-    background-color: rgb(157 157 157 / 74%);
-    color: #363636;
-    font-size: 24px;
+    /* background-color: rgb(255 255 255 / 80%); */
+    color: #fff;
+    font-size: 36px;
     padding: 25px;
     width: 100px;
     margin: 0 auto;
   }
   .slider-title {
     font-family: 'Opposit-Medium';
-    background-color: rgb(157 157 157 / 74%);
+    /* background-color: rgb(255 255 255 / 80%); */
     min-width: 20vw;
     padding: 15px;
     position: absolute;
     z-index: 1;
-    right: 15px;
+    left: 15px;
     bottom: 0;
-    color: #363636;
-    font-size: 36px;
-    -webkit-box-shadow: 0px 0px 10px 5px rgb(199 199 199 / 76%);
-    -moz-box-shadow: 0px 0px 10px 5px rgb(199 199 199 / 76%);
-    box-shadow: 0px 0px 10px 5px rgb(199 199 199 / 76%);
+    color: #fff;
+    font-size: 50px;
 }
 video {
   width: 100vw;
