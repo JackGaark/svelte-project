@@ -35,6 +35,7 @@
 </script>
 
 <div class="slider-wrapper" >
+  <img class="image-logo" src="images/00-sb-logo-simple-white.svg" alt="Logo"/>
   <h2 class="slider-title">{title}</h2>
   <div
     class="slider"
@@ -159,4 +160,37 @@ video {
   height: 100vh;
   object-fit: cover;
 }
+
+.image-logo {
+  position: absolute;
+  left: 25px;
+  top: 25px;
+  width: 250px;
+  z-index: 1;
+}
+
+@media screen and (max-width: 1200px) {
+  .slider-title {
+    bottom: 50px;
+    font-size: 42px;
+  }
+  .paginator {
+    bottom: 0
+  }
+  .paginator > h4 {
+    font-size: 32px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .slider-title {
+    font-size: 32px;
+  }
+
+  .paginator > h4 {
+    font-size: 24px;
+  }
+}
+
+
 </style>
