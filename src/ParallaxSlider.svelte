@@ -31,11 +31,10 @@
     slide = n;
     activeSlide.style.transform = `translate3d(-${n}00vw, 0, 0)`;
   };
-
 </script>
 
-<div class="slider-wrapper" >
-  <img class="image-logo" src="images/00-sb-logo-simple-white.svg" alt="Logo"/>
+<div class="slider-wrapper">
+  <img class="image-logo" src="images/00-sb-logo-simple-white.svg" alt="Logo" />
   <h2 class="slider-title">{title}</h2>
   <div
     class="slider"
@@ -43,7 +42,7 @@
     style={`width: ${slides.length}00vw`}
   >
     {#each slides as slide, i}
-      {#if slide.indexOf('videos') < 0}
+      {#if slide.indexOf("videos") < 0}
         <div
           id={i}
           class="slide"
@@ -55,9 +54,9 @@
           class="slide slide-video"
           style={`background-position: ${i}00vw center;`}
           on:click={nextSlide}
-          >
+        >
           <!-- svelte-ignore a11y-media-has-caption -->
-          <video src={slide} autoplay loop muted></video>
+          <video src={slide} autoplay loop muted />
         </div>
       {/if}
     {/each}
@@ -76,7 +75,7 @@
     </div>
   </div>
   <div class="paginator">
-    <h4>{slide+1} / {slides.length}</h4>
+    <h4>{slide + 1} / {slides.length}</h4>
   </div>
 </div>
 
@@ -107,7 +106,7 @@
   }
 
   .arrow {
-    font-family: 'Roc Wide';
+    font-family: "Roc Wide";
     position: absolute;
     width: 70px;
     cursor: pointer;
@@ -135,7 +134,7 @@
   }
 
   .paginator > h4 {
-    font-family: 'Moret Regular';
+    font-family: "Moret Regular";
     /* background-color: rgb(255 255 255 / 80%); */
     color: #fff;
     font-size: 36px;
@@ -144,7 +143,7 @@
     margin: 0 auto;
   }
   .slider-title {
-    font-family: 'Opposit-Medium';
+    font-family: "Opposit-Medium";
     /* background-color: rgb(255 255 255 / 80%); */
     min-width: 20vw;
     padding: 15px;
@@ -154,43 +153,41 @@
     bottom: 0;
     color: #fff;
     font-size: 50px;
-}
-video {
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-}
-
-.image-logo {
-  position: absolute;
-  left: 25px;
-  top: 25px;
-  width: 250px;
-  z-index: 1;
-}
-
-@media screen and (max-width: 1200px) {
-  .slider-title {
-    bottom: 50px;
-    font-size: 42px;
   }
-  .paginator {
-    bottom: 0
-  }
-  .paginator > h4 {
-    font-size: 32px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .slider-title {
-    font-size: 32px;
+  video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
   }
 
-  .paginator > h4 {
-    font-size: 24px;
+  .image-logo {
+    position: fixed;
+    left: 25px;
+    top: 25px;
+    width: 250px;
+    z-index: 1;
   }
-}
 
+  @media screen and (max-width: 1200px) {
+    .slider-title {
+      bottom: 50px;
+      font-size: 42px;
+    }
+    .paginator {
+      bottom: 0;
+    }
+    .paginator > h4 {
+      font-size: 32px;
+    }
+  }
 
+  @media screen and (max-width: 600px) {
+    .slider-title {
+      font-size: 32px;
+    }
+
+    .paginator > h4 {
+      font-size: 24px;
+    }
+  }
 </style>
