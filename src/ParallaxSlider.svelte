@@ -27,52 +27,60 @@
     }
   };
 
+  const Cursors = {
+    RIGHT: 'right-cursor',
+    LEFT: 'left-cursor',
+  };
+
+  const handleSliderClick = () => {
+    if(sliderCursor === Cursors.RIGHT) {
+      nextSlide();
+    }else if(sliderCursor === Cursors.LEFT) {
+      prevSlide();
+    }
+  }
+
   const onActiveSlide = (n) => {
     slide = n;
     activeSlide.style.transform = `translate3d(-${n}00vw, 0, 0)`;
   };
+
+  let sliderCursor = 'cursor';
+  let wrapperWidth = 0;
+
+	function handleMousemove(event) {
+    const cursorXPosition = event.clientX;
+    sliderCursor = (wrapperWidth / 2) <= cursorXPosition ? Cursors.RIGHT : Cursors.LEFT; 
+	}
 </script>
 
-<div class="slider-wrapper">
+<div class="slider-wrapper" bind:clientWidth={wrapperWidth} on:mousemove={handleMousemove}>
   <img class="image-logo" src="images/00-sb-logo-simple-white.svg" alt="Logo" />
   <h2 class="slider-title">{title}</h2>
   <div
-    class="slider"
+    class={`slider ${sliderCursor}`}
     bind:this={activeSlide}
+    on:click={handleSliderClick}
     style={`width: ${slides.length}00vw`}
   >
     {#each slides as slide, i}
       {#if slide.indexOf("videos") < 0}
         <div
           id={i}
-          class="slide"
+          class={`slide ${sliderCursor}`}
           style={`background-position: ${i}00vw center; background-image: url(${slide})`}
-          on:click={nextSlide}
         />
       {:else}
         <div
-          class="slide slide-video"
+          class={`slide slide-video ${sliderCursor}`}
           style={`background-position: ${i}00vw center;`}
-          on:click={nextSlide}
         >
           <!-- svelte-ignore a11y-media-has-caption -->
           <video src={slide} autoplay loop muted />
         </div>
       {/if}
+    
     {/each}
-  </div>
-
-  <div class="actions">
-    <div class="arrow left">
-      <span on:click={prevSlide}>
-        <ChevronLeftIcon />
-      </span>
-    </div>
-    <div class="arrow right">
-      <span on:click={nextSlide}>
-        <ChevronRightIcon />
-      </span>
-    </div>
   </div>
   <div class="paginator">
     <h4>{slide + 1} / {slides.length}</h4>
@@ -166,6 +174,14 @@
     top: 25px;
     width: 250px;
     z-index: 1;
+    cursor: url(/images/home-cursor.png), auto;
+  }
+
+  .right-cursor {
+    cursor: url(/images/right-cursor.png), auto;
+  }
+  .left-cursor {
+    cursor: url(/images/left-cursor.png), auto;
   }
 
   @media screen and (max-width: 1200px) {
@@ -179,6 +195,16 @@
     .paginator > h4 {
       font-size: 32px;
     }
+
+  .slide {
+      background-attachment: scroll;
+      height: 60vw;
+      background-position: center !important;
+  }
+
+  .image-logo, .slider-title {
+    display: none;
+  }
   }
 
   @media screen and (max-width: 600px) {

@@ -14,6 +14,7 @@
 <div class="header">
   <button on:click={showModal}> ? </button>
 </div>
+
 <PopUp bind:open>
   <p>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque excepturi

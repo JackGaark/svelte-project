@@ -20,23 +20,31 @@
     transition:fly={{
       y: -window.innerHeight,
       duration: 1000,
-      easing: elasticInOut,
     }}
   >
-    <slot />
-
-    <button on:click={hideModal}> ? </button>
+  <button class="modal-btn" on:click={hideModal}> ? </button>
+    <div class="modal-container">
+      <slot />
+    </div>
   </div>
 {/if}
 
 <style>
   .popup {
-    background: white;
+    background: #000;
     height: 100vh;
     width: 100vw;
     position: absolute;
     z-index: 1500;
-    top: 0;
-    left: 0;
   }
+  .modal-btn {
+    position: absolute;
+    right: 0;
+  }
+  .modal-container {
+    padding: 25px;
+    color: #fff;
+  }
+
+  
 </style>
