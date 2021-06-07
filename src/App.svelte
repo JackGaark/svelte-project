@@ -1,40 +1,31 @@
 <script>
   import ParallaxSlider from "./ParallaxSlider.svelte";
   import PopUp from "./PopUp.svelte";
+  import { _ } from 'svelte-i18n'
+import { initI18n } from "./i18n/i18n";
 
-  let open = false;
+  initI18n();
+
+  let modalOpen = false;
   function showModal() {
-    open = true;
+    modalOpen = true;
   }
   function hideModal() {
-    open = false;
+    modalOpen = false;
   }
 </script>
 
+
 <div class="header">
-  <button on:click={showModal}> ? </button>
+    <img src="images/dialog-icon.png" class="dialog-icon" alt="Dialog icon" on:click={showModal} />
 </div>
 
-<PopUp bind:open>
-  <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque excepturi
-    assumenda delectus! Sint sapiente, non commodi perspiciatis totam pariatur
-    voluptatum veritatis minus. Quam, voluptatum harum perspiciatis soluta
-    cumque debitis quas!
-  </p>
-
-  <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque excepturi
-    assumenda delectus! Sint sapiente, non commodi perspiciatis totam pariatur
-    voluptatum veritatis minus. Quam, voluptatum harum perspiciatis soluta
-    cumque debitis quas!
-  </p>
-</PopUp>
+<PopUp bind:modalOpen></PopUp>
 
 <main>
   <div class="container">
     <ParallaxSlider
-      title="This is the first title"
+      title="{$_('slider.1.title')}"
       slides={[
         "images/01-sb_cis_7.jpg",
       ]}
@@ -105,8 +96,9 @@
     font-family: "Opposit-Medium";
   }
 
-  p {
-    font-size: 18px;
-    font-family: "Opposit-Medium";
+  .dialog-icon {
+    width: 50px;
+    padding: 50px;
+    cursor: pointer;
   }
 </style>
