@@ -6,7 +6,6 @@ export const initI18n = () => {
   addMessages('fr', fr);
   init({
     fallbackLocale: 'en',
-    // initialLocale: getLocaleFromNavigator(),
-    initialLocale: 'en',
+    initialLocale: getLocaleFromNavigator(),
   });
 };

@@ -1,6 +1,6 @@
 <script>
   import { fly } from "svelte/transition";
-  import { elasticInOut } from "svelte/easing";
+  import { _ } from 'svelte-i18n';
   let scrollY;
   export let modalOpen = false;
   export let bonjourOpen = false;
@@ -33,14 +33,14 @@
   <img src="images/dialog-icon.png" class="dialog-icon" alt="Dialog icon" on:click={hideModal} />
     <img src="images/dialog-center.jpeg" class="dialog-center" alt="Dialog center" />
     <img class="image-logo" src="images/00-sb-logo-simple-white.svg" alt="Logo" />
-    <div class="bonjour-button" on:click={showBonjourDialog}>Say Bonjour</div>
+    <div class="bonjour-button" on:click={showBonjourDialog}>{$_('dialog.sayBonjour')}</div>
     {#if bonjourOpen}
       <div class="bonjour-dialog" transition:fly={{
         y: -window.innerHeight,
         duration: 1000,
       }}>
       <div class="bonjour-dialog-container">
-        <h1>Say Hi!</h1>
+        <h1>{$_('dialog.sayHi')}</h1>
         <div class="bonjour-close-dialog">
           <span on:click={hideBonjourDialog}>Close</span>
         </div>
@@ -50,35 +50,31 @@
     <div class="modal-container">
       <div class="modal-section left-side">
         <div class="modal-section-content">
-          <h5 class="title">Hi there, Bounjour and Bienvenue.</h5>
+          <h5 class="title">{$_('dialog.title')}</h5>
           <p class="left-text"> 
-            We are a creative studio - based on two of Canada's three coasts.
-            With HQs in both Montréal and Vancouver, we make sure we work almost all the timezones (lolz).
-            Got budget? Hit us up! we deliver sweet sweet creative, zappy copy or slick code. Wegotchu.
-            What if we had more text and a few more sentences in here? Then we would need to scroll some more...
-            A little more, still.
+            {$_('dialog.leftText')}
           </p>
         </div>
       </div>
-      <img src="images/dialog-center.jpeg" class="dialog-center-mobile" alt="Dialog center" />
+      <img src="images/center-image2.png" class="dialog-center-mobile" alt="Dialog center" />
       <div class="modal-section right-side">
         <div class="right modal-section-content">
           <div class="services">
-            <h5>Services</h5>
+            <h5>{$_('dialog.services.title')}</h5>
             <ul>
-              <li>Strategy</li>
-              <li>Branding</li>
-              <li>Design</li>
-              <li>Creative Direction</li>
-              <li>Art Direction</li>
-              <li>Motion</li>
-              <li>Production</li>
-              <li>Digital</li>
-              <li>Content</li>
+              <li>{$_('dialog.services.strategy')}</li>
+              <li>{$_('dialog.services.branding')}</li>
+              <li>{$_('dialog.services.design')}</li>
+              <li>{$_('dialog.services.creativeDirection')}</li>
+              <li>{$_('dialog.services.artDirection')}</li>
+              <li>{$_('dialog.services.motion')}</li>
+              <li>{$_('dialog.services.production')}</li>
+              <li>{$_('dialog.services.digital')}</li>
+              <li>{$_('dialog.services.content')}</li>
             </ul>
           </div>
           <div class="client-list">
-            <h5>Client List</h5>
+            <h5>{$_('dialog.clientList.title')}</h5>
             <ul>
               <li>Kombi Canada</li>
               <li>Nike</li>
