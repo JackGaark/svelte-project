@@ -202,9 +202,14 @@
       background-position: center !important;
   }
 
-  .image-logo, .slider-title {
-    display: none;
-  }
+    .image-logo {
+      width: 125px;
+    }
+    .slider-title {
+      font-size: 14px;
+      bottom: 30;
+      left: 5px;
+    }
   }
 
   @media screen and (max-width: 600px) {

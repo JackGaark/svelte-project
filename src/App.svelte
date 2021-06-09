@@ -1,20 +1,26 @@
 <script>
   import ParallaxSlider from "./ParallaxSlider.svelte";
   import PopUp from "./PopUp.svelte";
+  import { _ } from 'svelte-i18n';
+import { initI18n } from "./i18n/i18n";
 
-  let open = false;
+  initI18n();
+
+  let modalOpen = false;
   function showModal() {
-    open = true;
+    modalOpen = true;
   }
   function hideModal() {
-    open = false;
+    modalOpen = false;
   }
 </script>
 
+
 <div class="header">
-  <button on:click={showModal}> ? </button>
+    <img src="images/dialog-icon.png" class="dialog-icon" alt="Dialog icon" on:click={showModal} />
 </div>
 
+<<<<<<< HEAD
 <PopUp bind:open>
   <p>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque excepturi
@@ -114,17 +120,20 @@
     cumque debitis quas!
   </p>
 </PopUp>
+=======
+<PopUp bind:modalOpen></PopUp>
+>>>>>>> 5f5a1644190b0a905bb929d08de7479bbad0498e
 
 <main>
   <div class="container">
     <ParallaxSlider
-      title="This is the first title"
+      title="{$_('slider.1.title')}"
       slides={[
         "images/01-sb_cis_7.jpg",
       ]}
     />
     <ParallaxSlider
-      title="This is a random title 2"
+      title="{$_('slider.2.title')}"
       slides={[
         "images/02-sb_aldo2.jpg",
         "images/04-sb_rise_1b.jpg",
@@ -135,14 +144,14 @@
       ]}
     />
     <ParallaxSlider
-      title="This is a random title 3"
+      title="{$_('slider.3.title')}"
       slides={[
         "images/09-sb_ka_3.jpg",
         "videos/video1.mov"
       ]}
     />
     <ParallaxSlider
-      title="This is a random title 4"
+      title="{$_('slider.4.title')}"
       slides={[
         "images/11-sb_2.jpg",
         "images/12-sb-berlinb.jpg",
@@ -153,13 +162,13 @@
       ]}
     />
     <ParallaxSlider
-    title="This is a random title 5"
+    title="{$_('slider.5.title')}"
     slides={[
       "images/10-sb_4.jpg",
     ]}
   />
     <ParallaxSlider
-    title="This is a random title 6"
+      title="{$_('slider.6.title')}"
       slides={[
         "images/18-sb-denisets.jpg",
         "images/19-sb_cis_9b.jpg",
@@ -189,8 +198,9 @@
     font-family: "Opposit-Medium";
   }
 
-  p {
-    font-size: 18px;
-    font-family: "Opposit-Medium";
+  .dialog-icon {
+    width: 50px;
+    padding: 50px;
+    cursor: pointer;
   }
 </style>
