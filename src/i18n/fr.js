@@ -1,4 +1,4 @@
-export const en = {
+export const fr = {
   slider: {
     1: {
       title: 'Good morning',
