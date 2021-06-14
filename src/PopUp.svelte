@@ -36,14 +36,32 @@
     <div class="bonjour-button" on:click={showBonjourDialog}>{$_('dialog.sayBonjour')}</div>
     {#if bonjourOpen}
       <div class="bonjour-dialog" transition:fly={{
-        y: -window.innerHeight,
+        x: window.innerWidth,
         duration: 1000,
       }}>
       <div class="bonjour-dialog-container">
-        <h1>{$_('dialog.sayHi')}</h1>
-        <div class="bonjour-close-dialog">
-          <span on:click={hideBonjourDialog}>Close</span>
+        <h1>{$_('dialog.sayHi.title')}</h1>
+        <p class="p1">
+          {$_('dialog.sayHi.p1.text1')} 
+          {$_('dialog.sayHi.p1.text2')} 
+          {$_('dialog.sayHi.p1.text3')} 
+          {$_('dialog.sayHi.p1.text4')} 
+          {$_('dialog.sayHi.p1.text5')} 
+          {$_('dialog.sayHi.p1.text6')} 
+          {$_('dialog.sayHi.p1.text7')} 
+        </p>
+        <div class="address">
+          <h4>{$_('dialog.sayHi.address1.title')}</h4>
+          <span>{$_('dialog.sayHi.address1.text')}</span>
         </div>
+        <div class="address">
+          <h4>{$_('dialog.sayHi.address2.title')}</h4>
+          <span>{$_('dialog.sayHi.address2.text')}</span>
+        </div>
+        <div class="footer">
+          <p>{$_('dialog.sayHi.footer.text')}</p>
+        </div>
+        <div class="bonjour-button close" on:click={hideBonjourDialog}>{$_('dialog.sayBonjour')}</div>
       </div>
       </div>
     {/if}
@@ -162,6 +180,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 350px;
   }
 
   .left-text {
@@ -212,25 +231,39 @@
     z-index: 2;
   }
   .bonjour-dialog {
-  width: 400px;
-  height: 600px;
+  width: 600px;
+  height: 500px;
   position: absolute;
   z-index: 3;
-  background-color: #E2EE75;
-  border: solid 1px #C84501;
-  top: 50vh;
+  background-color: #F86C01;
+  border: solid 1px #F86C01;
+  top: 30vh;
   right:0;
   padding: 25px;
 }
 .bonjour-dialog-container {
   position:relative;
+  color: #1F0EDF;
+  overflow-y: auto;
 }
-.bonjour-close-dialog {
-  position: absolute;
-  right: 0;
-  top: -5px;
-  font-weight: 700;
-  font-size: 1.3rem
+.bonjour-dialog-container h1 {
+  color: #fff;
+}
+.bonjour-dialog-container h4 {
+  margin-bottom:0;
+}
+.bonjour-dialog-container .p1 {
+  font-size: 36px;
+  width: 88%;
+}
+.bonjour-dialog-container .footer {
+  color: #000;
+  margin-top: 60px;
+}
+.bonjour-button.close {
+  background-color: #1F0EDF;
+  color:  #F86C01;
+  top: 125px;
 }
 @media screen and (max-width: 600px) {
   .modal-section {
