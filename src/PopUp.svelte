@@ -74,7 +74,7 @@
           </p>
         </div>
       </div>
-      <img src="images/center-image2.png" class="dialog-center-mobile" alt="Dialog center" />
+      <img src="images/dialog-center-mobile.jpeg" class="dialog-center-mobile" alt="Dialog center" />
       <div class="modal-section right-side">
         <div class="right modal-section-content">
           <div class="services">
@@ -205,9 +205,6 @@
 }
 .dialog-center-mobile {
   display: none;
-}
-.dialog-center, .dialog-center-mobile {
-  opacity: 0.85;
 }
 
 .image-logo {
