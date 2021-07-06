@@ -42,6 +42,28 @@ export const fr = {
       title: 'Client list',
     },
     sayBonjour: 'Say Bonjour',
-    sayHi: 'Say Hi',
+    sayHi: {
+      title: 'Bonjour, Hi',
+      p1: {
+        text1: 'We love hearing from you',
+        text2: ' Get in touch in with us',
+        text3: 'via email.',
+        text4: 'Or snail mail',
+        text5: 'Or slide into',
+        text6: 'Our DMS.',
+        text7: "If that's your thing",
+      },
+      address1: {
+        title: 'West Coast Offices',
+        text: '478 Union street, Vancouver, BC CA - V6A2B6',
+      },
+      address2: {
+        title: 'East Coast Offices',
+        text: '1747 Saint Patrick, Montréal, QC CA - H3K3G9',
+      },
+      footer: {
+        text: 'Super Bonjour is a bi-coastal studio.',
+      },
+    },
   },
 };
