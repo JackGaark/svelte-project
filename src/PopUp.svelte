@@ -78,7 +78,7 @@
       <div class="modal-section right-side">
         <div class="right modal-section-content">
           <div class="services">
-            <h5>{$_('dialog.services.title')}</h5>
+            <h5 class="title">{$_('dialog.services.title')}</h5>
             <ul>
               <li>{$_('dialog.services.strategy')}</li>
               <li>{$_('dialog.services.branding')}</li>
@@ -92,7 +92,7 @@
             </ul>
           </div>
           <div class="client-list">
-            <h5>{$_('dialog.clientList.title')}</h5>
+            <h5 class="title">{$_('dialog.clientList.title')}</h5>
             <ul>
               <li>Kombi Canada</li>
               <li>Nike</li>
@@ -139,6 +139,7 @@
     align-content: stretch;
     height: 100vh;
     width: 100vw;
+    font-family: 'roc-grotesk';
 
   }
   .modal-section {
@@ -157,6 +158,8 @@
     padding: 50px;
     padding-top: 150px;
     position: relative;
+    font-family: 'roc-grotesk';
+
   }
   .modal-section-content p {
     position: absolute;
@@ -173,6 +176,11 @@
   .modal-container {
     color: #fff;
     overflow: auto;
+  }
+
+  h5.title {
+    font-weight: 100;
+    font-size: 1.2rem;
   }
   
   .dialog-center {
@@ -195,7 +203,8 @@
 }
   
 .right.modal-section-content h5 {
-  color: #C84501
+  color: #C84501;
+  font-weight: 200;
 }
 .right.modal-section-content ul {
   list-style: none;
@@ -224,8 +233,10 @@
     color:#1900FF;
     padding: 10px;
     border-radius: 15px;
-    font-size:0.7rem;
+    font-size: 0.8rem;
     z-index: 2;
+    font-weight: 600;
+    cursor: pointer;
   }
   .bonjour-dialog {
   width: 600px;
@@ -244,13 +255,15 @@
   overflow-y: auto;
 }
 .bonjour-dialog-container h1 {
+  font-weight: 100;
   color: #fff;
 }
 .bonjour-dialog-container h4 {
   margin-bottom:0;
 }
 .bonjour-dialog-container .p1 {
-  font-size: 36px;
+  font-size: 1.6rem;
+  font-weight: 300;
   width: 88%;
 }
 .bonjour-dialog-container .footer {
