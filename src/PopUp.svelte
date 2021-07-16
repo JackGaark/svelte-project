@@ -31,6 +31,8 @@
     }}
   >
   <img src="images/dialog-icon.png" class="dialog-icon" alt="Dialog icon" on:click={hideModal} />
+  <img src="images/dialog-icon-mobile.png" class="dialog-icon mobile" alt="Dialog icon" on:click={hideModal} />
+  <img src="images/dialog-icon-mobile.png" class="dialog-icon mobile" alt="Dialog icon" on:click={hideModal} />
     <img src="images/dialog-center.jpeg" class="dialog-center" alt="Dialog center" />
     <img class="image-logo" src="images/00-sb-logo-simple-white.svg" alt="Logo" />
     <div class="bonjour-button" on:click={showBonjourDialog}>{$_('dialog.sayBonjour')}</div>
@@ -137,7 +139,7 @@
     justify-content: center;
     align-items: stretch;
     align-content: stretch;
-    height: 100vh;
+    height: 80vh;
     width: 100vw;
     font-family: 'roc-grotesk';
 
@@ -147,6 +149,7 @@
     min-width: 300px;
     flex: 1 1 auto;
     overflow-y: auto;
+    padding-bottom: 200px;
   }
   .left-side {
     background-color: #1900FF;
@@ -158,7 +161,7 @@
     padding: 50px;
     padding-top: 150px;
     position: relative;
-    font-family: 'roc-grotesk';
+    font-family: 'Moret Regular';
 
   }
   .modal-section-content p {
@@ -168,10 +171,13 @@
   .dialog-icon {
     position: absolute;
     right: 0;
-    width: 50px;
+    width: 64px;
     padding: 50px;
     cursor: pointer;
     z-index: 4;
+  }
+  .dialog-icon.mobile {
+    display:none;
   }
   .modal-container {
     color: #fff;
@@ -179,14 +185,16 @@
   }
 
   h5.title {
+    font-family: 'Opposit-Medium';
     font-weight: 100;
-    font-size: 1.2rem;
+    font-size: 18px;
+    color: #E2EE75;
   }
   
   .dialog-center {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 55%;
     transform: translate(-50%, -50%);
     width: 350px;
   }
@@ -200,6 +208,8 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  font-family: 'roc-grotesk';
+  font-size:  18px;
 }
   
 .right.modal-section-content h5 {
@@ -218,7 +228,7 @@
 
 .image-logo {
     position: absolute;
-    left: 25px;
+    left: 48px;
     top: 25px;
     width: 250px;
     z-index: 1;
@@ -239,7 +249,7 @@
     cursor: pointer;
   }
   .bonjour-dialog {
-  width: 600px;
+  width: 552px;
   height: 500px;
   position: absolute;
   z-index: 3;
@@ -293,6 +303,7 @@
     flex-wrap: nowrap;
     justify-content: normal;
     overflow-y: auto;
+    height: 100vh;
   }
   .modal-section-content p {
     position: relative;
@@ -302,5 +313,14 @@
     height: 80vh;
     top:100px
   }
+
+  .dialog-icon {
+    display: none;
+  }
+  .dialog-icon.mobile {
+    width: 37px;
+    display:block;
+  }
+
 }
 </style>
