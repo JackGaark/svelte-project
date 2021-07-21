@@ -97,7 +97,7 @@ import { initI18n } from "./i18n/i18n";
   }
 
   .dialog-icon {
-    width: 50px;
+    width: 64px;
     padding: 50px;
     cursor: pointer;
   }
