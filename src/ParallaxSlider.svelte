@@ -99,10 +99,9 @@
     height: 100vh;
     width: 100vw;
     background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     transition: all 200ms ease-out 0s;
   }
+
 
   .slider-wrapper {
     position: relative;
@@ -134,22 +133,16 @@
 
   .paginator {
     position: absolute;
-    bottom: 25px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
+    bottom: 0;
+    right: 20vw;
     text-align: center;
-  }
-
-  .paginator > h4 {
+    width: 100px;
     font-family: "Moret Regular";
     /* background-color: rgb(255 255 255 / 80%); */
     color: #fff;
     font-size: 36px;
-    padding: 25px;
-    width: 100px;
-    margin: 0 auto;
   }
+
   .slider-title {
     font-family: "Opposit-Medium";
     /* background-color: rgb(255 255 255 / 80%); */
@@ -186,14 +179,15 @@
 
   @media screen and (max-width: 1200px) {
     .slider-title {
-      bottom: 50px;
-      font-size: 42px;
+      bottom: 0;
+      font-size: 1.2rem;
     }
     .paginator {
       bottom: 0;
     }
-    .paginator > h4 {
-      font-size: 32px;
+    .paginator {
+      font-size: 1.6rem;
+      right: 5vw;
     }
 
   .slide {
@@ -206,19 +200,20 @@
       width: 125px;
     }
     .slider-title {
-      font-size: 14px;
-      bottom: 30;
+      font-size: 1.6rem;
+      bottom: 0;
       left: 5px;
     }
   }
 
   @media screen and (max-width: 600px) {
     .slider-title {
-      font-size: 32px;
+      font-size: 1.2rem;
     }
 
-    .paginator > h4 {
-      font-size: 24px;
+    .paginator{
+      font-size: 1.2rem;
+      right: 5vw;
     }
   }
 </style>

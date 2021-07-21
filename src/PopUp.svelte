@@ -33,8 +33,7 @@
   <img src="images/dialog-icon.png" class="dialog-icon" alt="Dialog icon" on:click={hideModal} />
   <img src="images/dialog-icon-mobile.png" class="dialog-icon mobile" alt="Dialog icon" on:click={hideModal} />
   <img src="images/dialog-icon-mobile.png" class="dialog-icon mobile" alt="Dialog icon" on:click={hideModal} />
-    <img src="images/dialog-center.jpeg" class="dialog-center" alt="Dialog center" />
-    <img class="image-logo" src="images/00-sb-logo-simple-white.svg" alt="Logo" />
+   
     <div class="bonjour-button" on:click={showBonjourDialog}>{$_('dialog.sayBonjour')}</div>
     {#if bonjourOpen}
       <div class="bonjour-dialog" transition:fly={{
@@ -68,6 +67,8 @@
       </div>
     {/if}
     <div class="modal-container">
+      <img src="images/dialog-center.jpeg" class="dialog-center" alt="Dialog center" />
+      <img class="image-logo" src="images/00-sb-logo-simple-white.svg" alt="Logo" />
       <div class="modal-section left-side">
         <div class="modal-section-content">
           <h5 class="title">{$_('dialog.title')}</h5>
@@ -133,6 +134,7 @@
     z-index: 1500;
   }
   .modal-container {
+    position: relative;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -142,6 +144,7 @@
     height: 80vh;
     width: 100vw;
     font-family: 'roc-grotesk';
+    overflow-y: hide;
 
   }
   .modal-section {
@@ -193,7 +196,7 @@
   
   .dialog-center {
     position: absolute;
-    top: 50%;
+    top: 100%;
     left: 55%;
     transform: translate(-50%, -50%);
     width: 350px;
