@@ -101,4 +101,11 @@ import { initI18n } from "./i18n/i18n";
     padding: 50px;
     cursor: pointer;
   }
+  
+  @media screen and (max-width:600px){
+    .dialog-icon {
+      width: 30px;
+    }
+  }
+  
 </style>
