@@ -2,7 +2,7 @@
   import ParallaxSlider from "./ParallaxSlider.svelte";
   import PopUp from "./PopUp.svelte";
   import { _ } from 'svelte-i18n';
-import { initI18n } from "./i18n/i18n";
+  import { initI18n } from "./i18n/i18n";
 
   initI18n();
 
@@ -27,8 +27,11 @@ import { initI18n } from "./i18n/i18n";
     <ParallaxSlider
       title="{$_('slider.1.title')}"
       slides={[
-        "images/01-sb_cis_7.jpg",
-      ]}
+        "images/01_details_matter.jpg",
+        "images/01_lay_the_table-03.jpg",
+        "images/03_back_in_stock.jpg",
+        "images/04_lay_the_table-04.jpg"
+        ]}
     />
     <ParallaxSlider
       title="{$_('slider.2.title')}"
@@ -98,13 +101,16 @@ import { initI18n } from "./i18n/i18n";
 
   .dialog-icon {
     width: 64px;
+    height: 39px;
     padding: 50px;
     cursor: pointer;
   }
   
   @media screen and (max-width:600px){
     .dialog-icon {
-      width: 30px;
+      width: 37px;
+      height: 23px;
+      padding: 15px;
     }
   }
   
