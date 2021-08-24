@@ -164,8 +164,8 @@
   .image-logo {
     position: fixed;
     left: 25px;
-    top: 25px;
-    width: 250px;
+    top: 35px;
+    width: 177px;
     z-index: 1;
     cursor: url(/images/home-cursor.png), auto;
   }
@@ -183,18 +183,16 @@
       font-size: 1.2rem;
     }
     .paginator {
+      font-size: 1.6rem;
+      right: 20vw;
       bottom: 0;
     }
-    .paginator {
-      font-size: 1.6rem;
-      right: 5vw;
-    }
 
-  .slide {
-      background-attachment: scroll;
-      height: 60vw;
-      background-position: center !important;
-  }
+    .slide {
+        background-attachment: scroll;
+        height: 60vw;
+        background-position: center !important;
+    }
 
     .image-logo {
       width: 125px;
@@ -202,13 +200,14 @@
     .slider-title {
       font-size: 1.6rem;
       bottom: 0;
-      left: 5px;
+      left: 10px;
     }
   }
 
   @media screen and (max-width: 600px) {
     .slider-title {
       font-size: 1.2rem;
+      width: 5vw;
     }
 
     .paginator{

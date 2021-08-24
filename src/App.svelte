@@ -29,8 +29,9 @@
       slides={[
         "images/01_details_matter.jpg",
         "images/01_lay_the_table-03.jpg",
+        "images/06_shot_so_fresh.jpg",
         "images/03_back_in_stock.jpg",
-        "images/04_lay_the_table-04.jpg"
+        "images/04_lay_the_table-04.jpg",
         ]}
     />
     <ParallaxSlider
@@ -102,8 +103,10 @@
   .dialog-icon {
     width: 64px;
     height: 39px;
-    padding: 50px;
+    padding: 33px;
     cursor: pointer;
+    margin-top: 15px;
+    margin-right: 25px;
   }
   
   @media screen and (max-width:600px){
