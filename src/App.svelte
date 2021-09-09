@@ -51,6 +51,16 @@
         "images/09-sb_ka_3.jpg",
         "videos/video1.mov"
       ]}
+      newSlides={[
+        {
+          src: "images/09-sb_ka_3.jpg",
+          type: "image"
+        },
+        {
+          src: "this is my text",
+          type: "text"
+        }
+      ]}
     />
     <ParallaxSlider
       title="{$_('slider.4.title')}"
@@ -105,8 +115,8 @@
     height: 39px;
     padding: 33px;
     cursor: pointer;
-    margin-top: 15px;
-    margin-right: 25px;
+    margin-top: 60px;
+    margin-right: 54px;
   }
   
   @media screen and (max-width:600px){

@@ -262,68 +262,68 @@
   right:0;
   padding: 25px;
 }
-.bonjour-dialog-container {
-  position:relative;
-  color: #1F0EDF;
-  overflow-y: auto;
-}
-.bonjour-dialog-container h1 {
-  font-weight: 100;
-  color: #fff;
-}
-.bonjour-dialog-container h4 {
-  margin-bottom:0;
-}
-.bonjour-dialog-container .p1 {
-  font-size: 1.6rem;
-  font-weight: 300;
-  width: 88%;
-}
-.bonjour-dialog-container .footer {
-  color: #000;
-  margin-top: 60px;
-}
-.bonjour-button.close {
-  background-color: #1F0EDF;
-  color:  #F86C01;
-  top: 125px;
-}
-@media screen and (max-width: 600px) {
-  .modal-section {
-    width: 100%;
-    flex: 1;
-    overflow:initial
-  }
-  .dialog-center-mobile {
-    display: block;
-  }
-  .dialog-center {
-    display:none;
-  }
-
-  .modal-container { 
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: normal;
+  .bonjour-dialog-container {
+    position:relative;
+    color: #1F0EDF;
     overflow-y: auto;
-    height: 100vh;
   }
-  .modal-section-content p {
-    position: relative;
+  .bonjour-dialog-container h1 {
+    font-weight: 100;
+    color: #fff;
   }
-  .bonjour-dialog {
-    width: 70vw;
-    height: 80vh;
-    top:100px
+  .bonjour-dialog-container h4 {
+    margin-bottom:0;
   }
+  .bonjour-dialog-container .p1 {
+    font-size: 1.6rem;
+    font-weight: 300;
+    width: 88%;
+  }
+  .bonjour-dialog-container .footer {
+    color: #000;
+    margin-top: 60px;
+  }
+  .bonjour-button.close {
+    background-color: #1F0EDF;
+    color:  #F86C01;
+    top: 125px;
+  }
+    @media screen and (max-width: 600px) {
+    .modal-section {
+      width: 100%;
+      flex: 1;
+      overflow:initial
+    }
+    .dialog-center-mobile {
+      display: block;
+    }
+    .dialog-center {
+      display:none;
+    }
 
-  .dialog-icon {
-    display: none;
-  }
-  .dialog-icon.mobile {
-    width: 37px;
-    display:block;
-  }
+    .modal-container { 
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: normal;
+      overflow-y: auto;
+      height: 100vh;
+    }
+    .modal-section-content p {
+      position: relative;
+    }
+    .bonjour-dialog {
+      width: 70vw;
+      height: 80vh;
+      top:100px
+    }
+
+    .dialog-icon {
+      display: none;
+    }
+    .dialog-icon.mobile {
+      width: 37px;
+      display:block;
+    }
 
 }
 </style>

@@ -1,13 +1,18 @@
 <script>
   import { ChevronLeftIcon, ChevronRightIcon } from "svelte-feather-icons";
+  import { debug } from "svelte/internal";
 
   let activeSlide;
   let slide = 0;
   let x = 0;
   export let slides;
+  export let newSlides;
   export let title;
 
+  console.log(newSlides)
+
   const nextSlide = () => {
+    // {console.log ("hello world from next slide")}
     if (slide < slides.length - 1) {
       activeSlide.style.transform = `translate3d(-${slide + 1}00vw, 0, 0)`;
       slide += 1;
@@ -72,14 +77,14 @@
         />
       {:else}
         <div
+          id={i}
           class={`slide slide-video ${sliderCursor}`}
           style={`background-position: ${i}00vw center;`}
         >
           <!-- svelte-ignore a11y-media-has-caption -->
-          <video src={slide} autoplay loop muted />
+          <video src={slide.value} autoplay loop muted />
         </div>
       {/if}
-    
     {/each}
   </div>
   <div class="paginator">
@@ -147,13 +152,14 @@
     font-family: "Opposit-Medium";
     /* background-color: rgb(255 255 255 / 80%); */
     min-width: 20vw;
-    padding: 15px;
+    padding: 55px;
+    margin-bottom: 0;
     position: absolute;
     z-index: 1;
-    left: 15px;
+    left: 0;
     bottom: 0;
     color: #fff;
-    font-size: 50px;
+    font-size: 38px;
   }
   video {
     width: 100vw;
@@ -163,9 +169,10 @@
 
   .image-logo {
     position: fixed;
-    left: 25px;
+    left: 55px;
     top: 35px;
     width: 177px;
+    height: 4.75rem;
     z-index: 1;
     cursor: url(/images/home-cursor.png), auto;
   }
@@ -180,12 +187,13 @@
   @media screen and (max-width: 1200px) {
     .slider-title {
       bottom: 0;
-      font-size: 1.2rem;
+      font-size: 2.25rem;
     }
     .paginator {
       font-size: 1.6rem;
       right: 20vw;
       bottom: 0;
+      margin-bottom: 55px;
     }
 
     .slide {
@@ -196,11 +204,6 @@
 
     .image-logo {
       width: 125px;
-    }
-    .slider-title {
-      font-size: 1.6rem;
-      bottom: 0;
-      left: 10px;
     }
   }
 
