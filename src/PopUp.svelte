@@ -24,7 +24,6 @@
 {#if modalOpen}
   <div
     class="popup"
-    style="top:{scrollY}px"
     transition:fly={{
       y: -window.innerHeight,
       duration: 1000,
@@ -128,13 +127,12 @@
 
 <style>
   .popup {
-    height: 100vh;
+    height: 80vh;
     width: 100vw;
-    position: relative;
+    position: fixed;
     z-index: 1500;
   }
   .modal-container {
-    position: relative;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
