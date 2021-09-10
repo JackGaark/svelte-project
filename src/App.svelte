@@ -24,7 +24,7 @@
 
 <main>
   <div class="container">
-    <ParallaxSlider
+    <!-- <ParallaxSlider
       title="{$_('slider.1.title')}"
       slides={[
         "images/01_details_matter.jpg",
@@ -33,36 +33,41 @@
         "images/03_back_in_stock.jpg",
         "images/04_lay_the_table-04.jpg",
         ]}
-    />
+    /> -->
     <ParallaxSlider
       title="{$_('slider.2.title')}"
-      slides={[
-        "images/02-sb_aldo2.jpg",
-        "images/04-sb_rise_1b.jpg",
-        "images/05-sb_ka_1.jpg",
-        "images/06-sb_cis_2.jpg",
-        "images/07-sb_cis_3.jpg",
-        "images/08-sb-boxts.jpg",
+      slides={[ 
+        {src: "images/02-sb_aldo2.jpg",
+        type: "image"},
+        {src: "images/04-sb_rise_1b.jpg",
+        type: "image"},
+        {src: "images/05-sb_ka_1.jpg",
+        type: "image"},
+        {src: "images/06-sb_cis_2.jpg",
+        type: "image"},
+        {src: "images/07-sb_cis_3.jpg",
+        type: "image"},
+        {src: "images/08-sb-boxts.jpg",
+        type: "image"},
+        {src: "Lodor Ipsum",
+        type: "text"},
+        
       ]}
     />
     <ParallaxSlider
       title="{$_('slider.3.title')}"
-      slides={[
-        "images/09-sb_ka_3.jpg",
-        "videos/video1.mov"
+      slides={[ {
+        src: "images/09-sb_ka_3.jpg",
+        type: "image"
+      },
+      {
+        src: "videos/video1.mov",
+        type: "video"
+      }
       ]}
-      newSlides={[
-        {
-          src: "images/09-sb_ka_3.jpg",
-          type: "image"
-        },
-        {
-          src: "this is my text",
-          type: "text"
-        }
-      ]}
+      
     />
-    <ParallaxSlider
+    <!-- <ParallaxSlider
       title="{$_('slider.4.title')}"
       slides={[
         "images/11-sb_2.jpg",
@@ -72,14 +77,14 @@
         "images/16-sb_boy_1.jpg",
         "images/17-sb_cis_5.jpg",
       ]}
-    />
-    <ParallaxSlider
+    /> -->
+    <!-- <ParallaxSlider
     title="{$_('slider.5.title')}"
     slides={[
       "images/10-sb_4.jpg",
     ]}
-  />
-    <ParallaxSlider
+  /> -->
+    <!-- <ParallaxSlider
       title="{$_('slider.6.title')}"
       slides={[
         "images/18-sb-denisets.jpg",
@@ -89,7 +94,7 @@
         "images/24-sb_cis_10.jpg",
         "images/24-sb_cis_10.jpg",
       ]}
-    />
+    /> -->
   </div>
 </main>
 

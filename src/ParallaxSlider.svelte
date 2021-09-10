@@ -69,21 +69,25 @@
     style={`width: ${slides.length}00vw`}
   >
     {#each slides as slide, i}
-      {#if slide.indexOf("videos") < 0}
+      {#if slide.type === "image"}
         <div
           id={i}
           class={`slide ${sliderCursor}`}
-          style={`background-position: ${i}00vw center; background-image: url(${slide})`}
+          style={`background-position: ${i}00vw center; background-image: url(${slide.src})`}
         />
       {:else}
+        {#if slide.type === "video"}
         <div
           id={i}
           class={`slide slide-video ${sliderCursor}`}
           style={`background-position: ${i}00vw center;`}
         >
           <!-- svelte-ignore a11y-media-has-caption -->
-          <video src={slide.value} autoplay loop muted />
+          <video src={slide.src} autoplay loop muted />
         </div>
+        {:else}
+        <div class="text_slide">{slide.src}</div>
+        {/if}
       {/if}
     {/each}
   </div>
@@ -93,6 +97,12 @@
 </div>
 
 <style>
+  .text_slide {
+    background-color: red;
+    height: 100vh;
+    width: 100vw;
+  }
+  
   .slider {
     position: relative;
     display: flex;
