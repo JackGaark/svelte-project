@@ -98,9 +98,15 @@
 
 <style>
   .text_slide {
-    background-color: red;
+    background-color: #290B15;
     height: 100vh;
     width: 100vw;
+    color: white;
+    display: flex;
+    text-align: 15vw;
+    font-size: 38px;
+    font-weight: 100;
+    font-family: "Moret Regular";
   }
   
   .slider {

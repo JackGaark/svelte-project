@@ -24,66 +24,136 @@
 
 <main>
   <div class="container">
-    <!-- <ParallaxSlider
+    <ParallaxSlider
       title="{$_('slider.1.title')}"
       slides={[
-        "images/01_details_matter.jpg",
-        "images/01_lay_the_table-03.jpg",
-        "images/06_shot_so_fresh.jpg",
-        "images/03_back_in_stock.jpg",
-        "images/04_lay_the_table-04.jpg",
+        {
+          src: "images/01_details_matter.jpg",
+          type: "image"
+        },
+        {
+          src:"images/01_lay_the_table-03.jpg",
+          type: "image"
+        },
+        {
+          src:"images/06_shot_so_fresh.jpg",
+          type: "image"
+        },
+        {
+          src:"images/03_back_in_stock.jpg",
+          type: "image"
+        },
+        {
+          src:"images/04_lay_the_table-04.jpg",
+          type: "image"
+        },
         ]}
-    /> -->
+    />
     <ParallaxSlider
       title="{$_('slider.2.title')}"
       slides={[ 
-        {src: "images/02-sb_aldo2.jpg",
-        type: "image"},
-        {src: "images/04-sb_rise_1b.jpg",
-        type: "image"},
-        {src: "images/05-sb_ka_1.jpg",
-        type: "image"},
-        {src: "images/06-sb_cis_2.jpg",
-        type: "image"},
-        {src: "images/07-sb_cis_3.jpg",
-        type: "image"},
-        {src: "images/08-sb-boxts.jpg",
-        type: "image"},
-        {src: "Lodor Ipsum",
-        type: "text"},
+        {
+          src: "images/02-sb_aldo2.jpg",
+          type: "image"
+        },
+        {
+          src: "images/04-sb_rise_1b.jpg",
+          type: "image"
+        },
+        {
+          src: "images/05-sb_ka_1.jpg",
+          type: "image"
+        },
+        {
+          src: "images/06-sb_cis_2.jpg",
+          type: "image"
+        },
+        {
+          src: "images/07-sb_cis_3.jpg",
+          type: "image"
+        },
+        {
+          src: "images/08-sb-boxts.jpg",
+          type: "image"
+        },
+        {
+          src: "Lodor Ipsum",
+          type: "text"
+        },
         
       ]}
     />
     <ParallaxSlider
       title="{$_('slider.3.title')}"
-      slides={[ {
+      slides={[
+        {
         src: "images/09-sb_ka_3.jpg",
         type: "image"
-      },
-      {
+        },
+        {
         src: "videos/video1.mov",
         type: "video"
-      }
-      ]}
-      
+        },
+        {
+          src: "videos/video2.mov",
+          type: "video"
+        },
+        {
+          src: "videos/video3.mov",
+          type: "video"
+        },
+        {
+          src: "videos/video4.mov",
+          type: "video"
+        }
+      ]}   
     />
-    <!-- <ParallaxSlider
+    <ParallaxSlider
       title="{$_('slider.4.title')}"
       slides={[
-        "images/11-sb_2.jpg",
-        "images/12-sb-berlinb.jpg",
-        "images/13-sb_rise_4b.jpg",
-        "images/14-sb_cis_6.jpg",
-        "images/16-sb_boy_1.jpg",
-        "images/17-sb_cis_5.jpg",
+        {
+          src:"images/11-sb_2.jpg",
+          type: "image"
+        },
+        {
+          src: "images/12-sb-berlinb.jpg",
+          type: "image"
+        },
+        {
+          src: "images/13-sb_rise_4b.jpg",
+          type: "image"
+        },
+        {
+          src: "images/14-sb_cis_6.jpg",
+          type: "image"
+        },
+        {
+          src: "images/16-sb_boy_1.jpg",
+          type: "image"
+        },
+        {
+          src: "images/17-sb_cis_5.jpg",
+          type: "image"
+        },
+        {
+          src: "videos/video5.mp4",
+          type: "video"
+        }
       ]}
-    /> -->
-    <!-- <ParallaxSlider
+    />
+    <ParallaxSlider
     title="{$_('slider.5.title')}"
     slides={[
-      "images/10-sb_4.jpg",
-    ]}
-  /> -->
+        {
+          src: "images/10-sb_4.jpg",
+          type: "image"  
+        },
+        {
+          src: "videos/video6.mp4",
+          type: "videos"
+        }
+      ]}
+  />
     <!-- <ParallaxSlider
       title="{$_('slider.6.title')}"
       slides={[
