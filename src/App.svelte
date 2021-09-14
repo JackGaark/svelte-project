@@ -138,6 +138,10 @@
         {
           src: "videos/video5.mp4",
           type: "video"
+        },
+        {
+          src: "videos/video6.mp4",
+          type: "video"
         }
       ]}
     />
@@ -147,10 +151,6 @@
         {
           src: "images/10-sb_4.jpg",
           type: "image"  
-        },
-        {
-          src: "videos/video6.mp4",
-          type: "videos"
         }
       ]}
   />
