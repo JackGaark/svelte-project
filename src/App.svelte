@@ -47,6 +47,18 @@
           src:"images/04_lay_the_table-04.jpg",
           type: "image"
         },
+        {
+          src: "videos/video5.mp4",
+          type: "video"
+        },
+        {
+          src: "videos/video6.mp4",
+          type: "video"
+        },
+        {
+          src: "videos/video7.mp4",
+          type: "video"
+        }
         ]}
     />
     <ParallaxSlider
@@ -134,14 +146,6 @@
         {
           src: "images/17-sb_cis_5.jpg",
           type: "image"
-        },
-        {
-          src: "videos/video5.mp4",
-          type: "video"
-        },
-        {
-          src: "videos/video6.mp4",
-          type: "video"
         }
       ]}
     />
@@ -154,17 +158,35 @@
         }
       ]}
   />
-    <!-- <ParallaxSlider
+    <ParallaxSlider
       title="{$_('slider.6.title')}"
       slides={[
-        "images/18-sb-denisets.jpg",
-        "images/19-sb_cis_9b.jpg",
-        "images/20-sb-rentree4.jpg",
-        "images/21-sb_cis_8.jpg",
-        "images/24-sb_cis_10.jpg",
-        "images/24-sb_cis_10.jpg",
+          {
+          src: "images/18-sb-denisets.jpg",
+          type: "image"
+          },
+          { 
+          src: "images/19-sb_cis_9b.jpg",
+          type: "image"
+          },
+          { 
+          src: "images/20-sb-rentree4.jpg",
+          type: "image"
+          },
+          { 
+          src: "images/21-sb_cis_8.jpg",
+          type: "image"
+          },
+          { 
+          src: "images/24-sb_cis_10.jpg",
+          type: "image"
+          },
+          { 
+          src: "images/24-sb_cis_10.jpg",
+          type: "image"
+          }
       ]}
-    /> -->
+    />
   </div>
 </main>
 

@@ -103,6 +103,8 @@
     width: 100vw;
     color: white;
     display: flex;
+    justify-content: left;
+    padding-left: 55px ;
     text-align: 15vw;
     font-size: 38px;
     font-weight: 100;
