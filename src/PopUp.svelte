@@ -143,6 +143,7 @@
     width: 100vw;
     font-family: 'roc-grotesk';
     overflow-y: hide;
+    position: relative;
 
   }
   .modal-section {
@@ -150,7 +151,7 @@
     min-width: 300px;
     flex: 1 1 auto;
     overflow-y: auto;
-    padding-bottom: 200px;
+    padding-bottom: 530px;
   }
   .left-side {
     background-color: #1900FF;

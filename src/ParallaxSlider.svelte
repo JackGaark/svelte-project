@@ -86,7 +86,13 @@
           <video src={slide.src} autoplay loop muted />
         </div>
         {:else}
-        <div class="text_slide">{slide.src}</div>
+        <div class="text_slide">
+          <div class="text_slide_container">
+            <h5 class="text_title">
+              {slide.title}
+            </h5>{slide.src}
+          </div> 
+        </div>
         {/if}
       {/if}
     {/each}
@@ -97,16 +103,22 @@
 </div>
 
 <style>
+  .text_slide_container {
+    padding-left: 55px;
+  }
+  
+  .text_title {
+
+
+  }
+  
   .text_slide {
     background-color: #290B15;
     height: 100vh;
     width: 100vw;
     color: white;
-    display: flex;
-    justify-content: left;
-    padding-left: 55px ;
     text-align: 15vw;
-    font-size: 38px;
+    font-size: 54px;
     font-weight: 100;
     font-family: "Moret Regular";
   }
@@ -216,10 +228,10 @@
 
     .slide {
         background-attachment: scroll;
-        height: 60vw;
+        /* height: 60vw; */
         background-position: center !important;
     }
-
+ 
     .image-logo {
       width: 125px;
     }

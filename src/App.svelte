@@ -90,7 +90,8 @@
         },
         {
           src: "Lodor Ipsum",
-          type: "text"
+          type: "text",
+          title: "Heading file"
         },
         
       ]}
