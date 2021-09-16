@@ -208,10 +208,10 @@
   }
 
   .right-cursor {
-    cursor: url(/images/right-cursor.png), auto;
+    cursor: url(/images/right-cursor.svg), auto;
   }
   .left-cursor {
-    cursor: url(/images/left-cursor.png), auto;
+    cursor: url(/images/left-cursor.svg), auto;
   }
 
   @media screen and (max-width: 1200px) {
