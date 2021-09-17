@@ -89,6 +89,10 @@
           type: "image"
         },
         {
+          src:"videos/video8.mp4",
+          type: "video"
+        },
+        {
           src: "Lodor Ipsum",
           type: "text",
           title: "Heading file"
