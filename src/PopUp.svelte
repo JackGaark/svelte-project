@@ -291,7 +291,8 @@
     .modal-section {
       width: 100%;
       flex: 1;
-      overflow:initial
+      overflow:initial;
+      padding-bottom: 0px;
     }
     .dialog-center-mobile {
       display: block;
