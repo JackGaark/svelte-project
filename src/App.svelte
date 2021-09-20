@@ -93,7 +93,7 @@
           type: "video"
         },
         {
-          src: "Lodor Ipsum",
+          src: "The body sats what words cannot- vulnerable, free and quitely powerful.  Our creative direction counterbalances traditional beauty ideals and removes the male gaze to introduce a woman's body in a new and real context. HIRRS is designed for a woman's movement.",
           type: "text",
           title: "Heading file"
         },

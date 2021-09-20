@@ -105,10 +105,16 @@
 <style>
   .text_slide_container {
     padding-left: 55px;
+    padding-top: 80px;
+    width: 60%;
   }
   
   .text_title {
-
+    padding-top: 50px;
+    color: #E2EE75;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: "Opposit-Medium";
 
   }
   
