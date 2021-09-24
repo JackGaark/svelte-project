@@ -86,7 +86,7 @@
           <video src={slide.src} autoplay loop muted />
         </div>
         {:else}
-        <div class="text_slide">
+        <div class="slide text_slide">
           <div class="text_slide_container">
             <h5 class="text_title">
               {slide.title}
@@ -234,7 +234,6 @@
 
     .slide {
         background-attachment: scroll;
-        /* height: 60vw; */
         background-position: center !important;
     }
  
@@ -252,6 +251,24 @@
     .paginator{
       font-size: 1.2rem;
       right: 5vw;
+    }
+
+    .slide {
+      height: 60vw;
+    }
+
+    .text_slide {
+      padding-top: 0px;
+      font-size: 18px;
+    }
+
+    .text_slide_container {
+      padding-top: 5px;
+    }
+
+    .text_title {
+      padding-top: 5px;
+      font-size: 24px;
     }
   }
 </style>

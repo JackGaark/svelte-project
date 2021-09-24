@@ -28,36 +28,29 @@
       title="{$_('slider.1.title')}"
       slides={[
         {
-          src: "images/01_details_matter.jpg",
+          src: "images/LB_1_1.png",
           type: "image"
         },
         {
-          src:"images/01_lay_the_table-03.jpg",
+          src:"images/LB_1_2.png",
           type: "image"
         },
         {
-          src:"images/06_shot_so_fresh.jpg",
+          src:"images/LB_1_3.png",
           type: "image"
         },
         {
-          src:"images/03_back_in_stock.jpg",
+          src:"images/LB_1_5.png",
           type: "image"
         },
         {
-          src:"images/04_lay_the_table-04.jpg",
+          src:"images/LB_1_6.png",
           type: "image"
         },
         {
-          src: "videos/video5.mp4",
-          type: "video"
-        },
-        {
-          src: "videos/video6.mp4",
-          type: "video"
-        },
-        {
-          src: "videos/video7.mp4",
-          type: "video"
+          src: "The body sats what words cannot- vulnerable, free and quitely powerful.  Our creative direction counterbalances traditional beauty ideals and removes the male gaze to introduce a woman's body in a new and real context. HIRRS is designed for a woman's movement.",
+          type: "text",
+          title: "Heading file"
         }
         ]}
     />
@@ -65,63 +58,76 @@
       title="{$_('slider.2.title')}"
       slides={[ 
         {
-          src: "images/02-sb_aldo2.jpg",
+          src: "images/LB_2_1.png",
           type: "image"
         },
         {
-          src: "images/04-sb_rise_1b.jpg",
+          src: "images/LB_2_2.png",
           type: "image"
         },
         {
-          src: "images/05-sb_ka_1.jpg",
+          src: "images/LB_2_3.png",
           type: "image"
         },
         {
-          src: "images/06-sb_cis_2.jpg",
+          src: "images/LB_2_4.png",
           type: "image"
         },
         {
-          src: "images/07-sb_cis_3.jpg",
+          src: "images/LB_2_5.png",
           type: "image"
         },
         {
-          src: "images/08-sb-boxts.jpg",
+          src: "images/LB_2_6.png",
           type: "image"
         },
         {
-          src:"videos/video8.mp4",
-          type: "video"
+          src:"images/LB_2_7.png",
+          type: "image"
+        },
+        {
+          src:"images/LB_2_8.png",
+          type: "image"
         },
         {
           src: "The body sats what words cannot- vulnerable, free and quitely powerful.  Our creative direction counterbalances traditional beauty ideals and removes the male gaze to introduce a woman's body in a new and real context. HIRRS is designed for a woman's movement.",
           type: "text",
           title: "Heading file"
-        },
-        
+        }
       ]}
     />
     <ParallaxSlider
       title="{$_('slider.3.title')}"
       slides={[
         {
-        src: "images/09-sb_ka_3.jpg",
+        src: "images/HIRRS_1.png",
         type: "image"
         },
         {
-        src: "videos/video1.mov",
-        type: "video"
+        src: "images/HIRRS_2.png",
+        type: "image"
         },
         {
-          src: "videos/video2.mov",
-          type: "video"
+          src: "images/HIRRS_3.png",
+          type: "image"
         },
         {
-          src: "videos/video3.mov",
-          type: "video"
+          src: "images/HIRRS_4.png",
+          type: "image"
         },
         {
-          src: "videos/video4.mov",
-          type: "video"
+          src: "images/HIRRS_5.png",
+          type: "image"
+        },
+
+        {
+          src: "images/HIRRS_6.png",
+          type: "image"
+        },
+        {
+          src: "The body sats what words cannot- vulnerable, free and quitely powerful.  Our creative direction counterbalances traditional beauty ideals and removes the male gaze to introduce a woman's body in a new and real context. HIRRS is designed for a woman's movement.",
+          type: "text",
+          title: "Heading file"
         }
       ]}   
     />
