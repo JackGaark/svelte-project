@@ -172,9 +172,10 @@
   }
   .dialog-icon {
     position: absolute;
-    right: 0;
+    right: 15px;
     width: 64px;
-    padding: 50px;
+    height: 39px;
+    padding: 90px;
     cursor: pointer;
     z-index: 4;
   }
