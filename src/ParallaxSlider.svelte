@@ -97,7 +97,7 @@
               </div>
             </div>
             {:else}
-        <div class="slide text_slide">
+        <div class="slide text_slide" style={`color: ${slide.color}; font-family: ${slide.font || 'Moret Regular'}; font-size: ${slide.fontSize}` }>
           <div class="text_slide_container">
             <h5 class="text_title">
               {slide.title}
@@ -123,9 +123,11 @@
 
   .slide-column {
     flex-shrink: 1;
-    background-color: #290B15;
+    background-color: #C374F6;
     width: 25vw;
     min-height: 300px;
+    display: flex;
+    align-items: center;
   }
 
   .slide-right-column {
@@ -148,7 +150,7 @@
 
   .two-columns-slide{
     display: flex;
-    background-color: #E2EE75;
+    background-color: #C374F6;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
@@ -176,7 +178,7 @@
     width: 100vw;
     color: white;
     text-align: 15vw;
-    font-size: 54px;
+    font-size: 50px;
     font-weight: 100;
     font-family: "Moret Regular";
   }
@@ -244,7 +246,7 @@
     margin-bottom: 0;
     position: absolute;
     z-index: 1;
-    left: 0;
+    left: -20px;
     bottom: 0;
     color: #fff;
     font-size: 38px;
@@ -257,7 +259,7 @@
 
   .image-logo {
     position: fixed;
-    left: 55px;
+    left: 30px;
     top: 35px;
     width: 177px;
     height: 4.75rem;
@@ -281,12 +283,12 @@
       font-size: 1.6rem;
       right: 20vw;
       bottom: 0;
-      margin-bottom: 55px;
+      margin-bottom: -10px;
     }
 
     .slide {
-        background-attachment: scroll;
-        background-position: center !important;
+      background-attachment: scroll;
+      background-position: center !important;
     }
  
     .image-logo {
@@ -296,12 +298,12 @@
 
   @media screen and (max-width: 600px) {
     .slider-title {
-      font-size: 1.2rem;
+      font-size: 1.0rem;
       width: 5vw;
     }
 
     .paginator{
-      font-size: 1.2rem;
+      font-size: 1.0rem;
       right: 5vw;
     }
 
@@ -311,7 +313,7 @@
 
     .text_slide {
       padding-top: 0px;
-      font-size: 18px;
+      font-size: 10px !important;
     }
 
     .text_slide_container {

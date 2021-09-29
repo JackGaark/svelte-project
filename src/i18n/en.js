@@ -18,6 +18,21 @@ export const en = {
     6: {
       title: 'Good morning 6',
     },
+    7: {
+      title: 'Good morning 7',
+    },
+    8: {
+      title: 'Good morning 8',
+    },
+    9: {
+      title: 'Good morning 9',
+    },
+    10: {
+      title: 'Good morning 10',
+    },
+    11: {
+      title: 'Good morning 11',
+    }
   },
   dialog: {
     title: 'Hi there, Bounjour and Bienvenue.',

@@ -203,7 +203,7 @@
   }
 
   .left-text {
-    font-size: 46px;
+    font-size: 30px;
     line-height: 60px;
   }
 
