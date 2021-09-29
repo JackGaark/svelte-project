@@ -86,6 +86,17 @@
           <video src={slide.src} autoplay loop muted />
         </div>
         {:else}
+          {#if slide.type === "two-columns"}
+            <div class="slide two-columns-slide">
+              <div class="slide-column slide-left-column">
+                <video src={slide.videoSrc} autoplay loop muted />
+              </div>
+              <div class="slide-column slide-right-column">
+                <!-- svelte-ignore a11y-img-redundant-alt -->
+                <img src={slide.imageSrc} alt="left column image">
+              </div>
+            </div>
+            {:else}
         <div class="slide text_slide">
           <div class="text_slide_container">
             <h5 class="text_title">
@@ -94,8 +105,10 @@
           </div> 
         </div>
         {/if}
+        {/if}
       {/if}
     {/each}
+    
   </div>
   <div class="paginator">
     <h4>{slide + 1} / {slides.length}</h4>
@@ -103,6 +116,45 @@
 </div>
 
 <style>
+
+    video::-webkit-media-controls-fullscreen-button, video::-webkit-media-controls-play-button, video::-webkit-media-controls-pausebutton {
+    display: none;
+  }
+
+  .slide-column {
+    flex-shrink: 1;
+    background-color: #290B15;
+    width: 25vw;
+    min-height: 300px;
+  }
+
+  .slide-right-column {
+    margin-left: 55px;
+  }
+
+  .slide-left-column {
+    margin-right: 55px;
+  }
+
+  .slide-left-column video {
+      width: 100%;
+      height: auto;
+  }
+
+  .slide-right-column img {
+      width: 100%;
+      height: auto;    
+  }
+
+  .two-columns-slide{
+    display: flex;
+    background-color: #E2EE75;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
+  }
   .text_slide_container {
     padding-left: 55px;
     padding-top: 80px;

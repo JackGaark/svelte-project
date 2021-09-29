@@ -58,8 +58,152 @@
         }
         ]}
     />
+    <ParallaxSlider 
+        title="{$_('slider.2.title')}"
+        slides={[
+          {
+            src: "images/ALTI_1.png",
+            type: "image"
+          },
+          {
+            src: "images/ALTI_2.png",
+            type: "image"
+          },
+          {
+            src: "images/ALTI_3.png",
+            type: "image"
+          },
+          {
+            src: "images/ALTI_4.png",
+            type: "image"
+          },
+          {
+            src: "images/ALTI_5.png",
+            type: "image"
+          },
+          {
+            src: "images/ALTI_6.png",
+            type: "image"
+          },
+          {
+          src: "The body sats what words cannot- vulnerable, free and quitely powerful.  Our creative direction counterbalances traditional beauty ideals and removes the male gaze to introduce a woman's body in a new and real context. HIRRS is designed for a woman's movement.",
+          type: "text",
+          title: "Heading file"
+          }
+        ]}
+    />
     <ParallaxSlider
-      title="{$_('slider.1.title')}"
+      title="{$_('slider.3.title')}"
+      slides={[ 
+        {
+          src: "images/HSCo_Mag_1.png",
+          type: "image"
+        },
+        {
+          src: "images/HSCo_Mag_2.png",
+          type: "image"
+        },
+        {
+          src: "images/HSCo_Mag_3.png",
+          type: "image"
+        },
+        {
+          src: "images/HSCo_Mag_4.png",
+          type: "image"
+        },
+        {
+          src: "images/HSCo_Mag_5.png",
+          type: "image"
+        },
+        {
+          src: "images/HSCo_Mag_6.png",
+          type: "image"
+        },
+        {
+          src: "The body sats what words cannot- vulnerable, free and quitely powerful.  Our creative direction counterbalances traditional beauty ideals and removes the male gaze to introduce a woman's body in a new and real context. HIRRS is designed for a woman's movement.",
+          type: "text",
+          title: "Heading file"
+        }
+      ]}
+    />
+    <ParallaxSlider
+      title="{$_('slider.4.title')}"
+      slides={[
+        {
+          src: "images/NP_1.png",
+          type: "image"
+        },
+        {
+          src:"images/NP_2.png",
+          type: "image"
+        },
+        {
+          src:"videos/NP_3.mp4",
+          type: "video"
+        },
+        {
+          src:"videos/NP_4.mp4",
+          type: "video"
+        },
+        {
+          src:"videos/NP_5.mp4",
+          type: "video"
+        },
+        {
+          src:"images/NP_6.png",
+          type: "image"
+        },
+        {
+          src:"images/NP_7.png",
+          type: "image"
+        },
+        {
+          src:"videos/NP_8.mp4",
+          type: "video"
+        },
+        {
+          src: "The body sats what words cannot- vulnerable, free and quitely powerful.  Our creative direction counterbalances traditional beauty ideals and removes the male gaze to introduce a woman's body in a new and real context. HIRRS is designed for a woman's movement.",
+          type: "text",
+          title: "Heading file"
+        }
+        ]}
+    />
+    <ParallaxSlider
+      title="{$_('slider.5.title')}"
+      slides={[
+        {
+          src: "images/KOMBI_1.png",
+          type: "image"
+        },
+        {
+          src:"images/KOMBI_2.png",
+          type: "image"
+        },
+        {
+          src:"images/KOMBI_3.png",
+          type: "image"
+        },
+        {
+          src:"images/KOMBI_4.png",
+          type: "image"
+        },
+        {
+          src:"images/KOMBI_5.png",
+          type: "image"
+        },
+        {
+          src:"images/KOMBI_6.png",
+          type: "image"
+        },
+        {
+          src: "The body sats what words cannot- vulnerable, free and quitely powerful.  Our creative direction counterbalances traditional beauty ideals and removes the male gaze to introduce a woman's body in a new and real context. HIRRS is designed for a woman's movement.",
+          type: "text",
+          title: "Heading file"
+        }
+        ]}
+    />
+    <ParallaxSlider
+      title="{$_('slider.6.title')}"
       slides={[
         {
           src: "images/LB_1_1.png",
@@ -89,11 +233,16 @@
         ]}
     />
     <ParallaxSlider
-      title="{$_('slider.2.title')}"
+      title="{$_('slider.7.title')}"
       slides={[ 
         {
           src: "images/LB_2_1.png",
           type: "image"
+        },
+        {
+          imageSrc: "images/LB_2_1.png",
+          videoSrc: "videos/video7.mp4",
+          type: "two-columns"
         },
         {
           src: "images/LB_2_2.png",
@@ -130,8 +279,9 @@
         }
       ]}
     />
+    
     <ParallaxSlider
-      title="{$_('slider.3.title')}"
+      title="{$_('slider.8.title')}"
       slides={[
         {
         src: "images/HIRRS_1.png",
@@ -162,11 +312,16 @@
           src: "The body sats what words cannot- vulnerable, free and quitely powerful.  Our creative direction counterbalances traditional beauty ideals and removes the male gaze to introduce a woman's body in a new and real context. HIRRS is designed for a woman's movement.",
           type: "text",
           title: "Heading file"
+        },
+        {
+          src: "The body sats what words cannot- vulnerable, free and quitely powerful.  Our creative direction counterbalances traditional beauty ideals and removes the male gaze to introduce a woman's body in a new and real context. HIRRS is designed for a woman's movement.",
+          type: "text",
+          title: "Heading file"
         }
       ]}   
     />
     <ParallaxSlider
-      title="{$_('slider.4.title')}"
+      title="{$_('slider.9.title')}"
       slides={[
         {
           src:"images/11-sb_2.jpg",
@@ -195,7 +350,7 @@
       ]}
     />
     <ParallaxSlider
-    title="{$_('slider.5.title')}"
+    title="{$_('slider.10.title')}"
     slides={[
         {
           src: "images/10-sb_4.jpg",
@@ -204,7 +359,7 @@
       ]}
   />
     <ParallaxSlider
-      title="{$_('slider.6.title')}"
+      title="{$_('slider.11.title')}"
       slides={[
           {
           src: "images/18-sb-denisets.jpg",
@@ -260,6 +415,8 @@
     margin-top: 60px;
     margin-right: 54px;
   }
+
+  
   
   @media screen and (max-width:600px){
     .dialog-icon {
