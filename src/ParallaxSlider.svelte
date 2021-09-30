@@ -158,7 +158,7 @@
     align-content: stretch;
   }
   .text_slide_container {
-    padding-left: 55px;
+    padding-left: 26px;
     padding-top: 80px;
     width: 60%;
   }
