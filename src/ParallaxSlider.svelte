@@ -91,20 +91,20 @@
               <div class="slide-column slide-left-column">
                 <video src={slide.videoSrc} autoplay loop muted />
               </div>
-              <div class="slide-column slide-right-column">
-                <!-- svelte-ignore a11y-img-redundant-alt -->
-                <img src={slide.imageSrc} alt="left column image">
-              </div>
+                <div class="slide-column slide-right-column">
+                  <!-- svelte-ignore a11y-img-redundant-alt -->
+                  <img src={slide.imageSrc} alt="left column image">
+                </div>
             </div>
             {:else}
-        <div class="slide text_slide" style={`color: ${slide.color}; font-family: ${slide.font || 'Moret Regular'}; font-size: ${slide.fontSize}` }>
-          <div class="text_slide_container">
-            <h5 class="text_title">
-              {slide.title}
-            </h5>{slide.src}
-          </div> 
-        </div>
-        {/if}
+            <div class="slide text_slide" style={`color: ${slide.color}; font-family: ${slide.font || 'Moret Regular'}; font-size: ${slide.fontSize}` }>
+                <div class="text_slide_container">
+                  <h5 class="text_title">
+                    {slide.title}
+                  </h5>{slide.src}
+                </div> 
+            </div>
+          {/if}
         {/if}
       {/if}
     {/each}
@@ -139,16 +139,16 @@
   }
 
   .slide-left-column video {
-      width: 100%;
-      height: auto;
+    width: 100%;
+    height: auto;
   }
 
   .slide-right-column img {
-      width: 100%;
-      height: auto;    
+    width: 100%;
+    height: auto;    
   }
 
-  .two-columns-slide{
+  .two-columns-slide {
     display: flex;
     background-color: #C374F6;
     flex-direction: row;
@@ -242,11 +242,11 @@
     font-family: "Opposit-Medium";
     /* background-color: rgb(255 255 255 / 80%); */
     min-width: 20vw;
-    padding: 55px;
+    padding: 25px;
     margin-bottom: 0;
     position: absolute;
     z-index: 1;
-    left: -20px;
+    left: 0px;
     bottom: 0;
     color: #fff;
     font-size: 38px;
@@ -259,7 +259,7 @@
 
   .image-logo {
     position: fixed;
-    left: 30px;
+    left: 24px;
     top: 35px;
     width: 177px;
     height: 4.75rem;
@@ -275,24 +275,24 @@
   }
 
   @media screen and (max-width: 1200px) {
-    .slider-title {
-      bottom: 0;
-      font-size: 2.25rem;
-    }
-    .paginator {
-      font-size: 1.6rem;
-      right: 20vw;
-      bottom: 0;
-      margin-bottom: -10px;
-    }
+  .slider-title {
+    bottom: 0;
+    font-size: 2.25rem;
+  }
+  .paginator {
+    font-size: 1.6rem;
+    right: 20vw;
+    bottom: 0;
+    margin-bottom: -10px;
+  }
 
-    .slide {
-      background-attachment: scroll;
-      background-position: center !important;
-    }
+  .slide {
+    background-attachment: scroll;
+    background-position: center !important;
+  }
  
-    .image-logo {
-      width: 125px;
+  .image-logo {
+    width: 125px;
     }
   }
 

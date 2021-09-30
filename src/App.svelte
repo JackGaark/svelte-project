@@ -55,8 +55,16 @@
           src: "The body sats what words cannot- vulnerable, free and quitely powerful.  Our creative direction counterbalances traditional beauty ideals and removes the male gaze to introduce a woman's body in a new and real context. HIRRS is designed for a woman's movement.",
           type: "text",
           title: "Heading file"
+        },
+        {
+          src: "The body sats what words cannot- vulnerable, free and quitely powerful.  Our creative direction counterbalances traditional beauty ideals and removes the male gaze to introduce a woman's body in a new and real context. HIRRS is designed for a woman's movement.",
+          type: "text",
+          title: "Heading file",
+          font: "roc-grotesk, sans-serif",
+          fontSize: "36px",
+          color: "#E2EE75"
         }
-        ]}
+      ]}
     />
     <ParallaxSlider 
         title="{$_('slider.2.title')}"
@@ -171,7 +179,8 @@
           type: "text",
           title: "Heading file",
           font: "roc-grotesk, sans-serif",
-          fontSize: "36px"
+          fontSize: "36px",
+          color: "#E2EE75"
         }
         ]}
     />
@@ -416,7 +425,7 @@
     height: 39px;
     padding: 33px;
     cursor: pointer;
-    margin-top: 60px;
+    margin-top: 35px;
     margin-right: 23px;
   }
 
